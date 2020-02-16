@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Update</title>
+    </head>
+    <body>
+        <form action = "{% url 'pet-update' pet.id %}" method = POST>
+          {% csrf_token%}
+          {{ form }}
+          <input type="submit" value = "update">
+        </form>
+    </body>
+</html>

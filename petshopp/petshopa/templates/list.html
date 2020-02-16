@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>available pets</title>
+    </head>
+    <body>
+        {% for soso in pet %}
+            <a href="{% url 'pet-detail' soso.id %}">
+                <ul>
+                    <li> Pet Name: {{soso.name}}</li>
+
+                    <li>Availability: {{soso.available}}</li>
+<!--
+                    <li>
+                      <img src="{{pet.image.url}}" alt="Hey noob!">
+                    </li>
+
+-->
+                </ul>
+            </a>
+            <a href="{% url 'pet-delete' soso.id %}"><button>Delete</button></a>
+        {% endfor %}
+
+    </body>
+</html>

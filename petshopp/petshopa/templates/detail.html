@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Detail</title>
+    </head>
+    <body>
+        <ul>
+            <li>pet name:{{pet.name}}</li>
+            <li>age :{{pet.age}}</li>
+            <li>avalabilty :{{pet.available}}</li>
+            <li>price :{{pet.price}}</li>
+
+
+        </ul>
+        <a href="{% url 'pet-update' pet.id %}"><button>Update</button></a>
+
+    </body>
+</html>
