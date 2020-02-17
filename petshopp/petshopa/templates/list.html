@@ -9,14 +9,11 @@
             <a href="{% url 'pet-detail' soso.id %}">
                 <ul>
                     <li> Pet Name: {{soso.name}}</li>
-
-                    <li>Availability: {{soso.available}}</li>
-<!--
                     <li>
-                      <img src="{{pet.image.url}}" alt="Hey noob!">
+                        {% if soso.image %}
+                          <img src="{{ soso.image.url }}">
+                        {% endif %}
                     </li>
-
--->
                 </ul>
             </a>
             <a href="{% url 'pet-delete' soso.id %}"><button>Delete</button></a>

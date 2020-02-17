@@ -21,7 +21,7 @@ def pets_detail(request, pet_id):
 def pet_create(request):
     form = PetForm()
     if request.method == "POST":
-        form = PetForm(request.POST)
+        form = PetForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             return redirect('pet-list')
@@ -34,7 +34,7 @@ def pet_update(request, pet_id):
         pet = PetShop.objects.get(id = pet_id)
         form = PetForm(instance=pet)
         if request.method == "POST":
-            form = PetForm(request.POST,instance=pet)
+            form = PetForm(request.POST,request.FILES,instance=pet)
             if form.is_valid:
                 form.save()
                 return redirect('pet-list')

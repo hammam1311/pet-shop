@@ -5,7 +5,7 @@
         <title>Update</title>
     </head>
     <body>
-        <form action = "{% url 'pet-update' pet.id %}" method = POST>
+        <form action = "{% url 'pet-update' pet.id %}" method = "POST" enctype="multipart/form-data">
           {% csrf_token%}
           {{ form }}
           <input type="submit" value = "update">

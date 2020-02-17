@@ -5,4 +5,4 @@ class PetShop(models.Model):
         age = models.IntegerField()
         available = models.BooleanField(default=True)
         price = models.DecimalField(max_digits=5, decimal_places=2,)
-        #image = models.ImageField(upload_to='media')
+        image = models.ImageField(blank=True,null=True)

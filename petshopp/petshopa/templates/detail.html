@@ -11,6 +11,10 @@
             <li>avalabilty :{{pet.available}}</li>
             <li>price :{{pet.price}}</li>
 
+            {% if pet.image %}
+              <img src="{{ pet.image.url }}">
+            {% endif %}
+
 
         </ul>
         <a href="{% url 'pet-update' pet.id %}"><button>Update</button></a>
